@@ -1,0 +1,61 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.formulario{
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    width: 250px;
+    height: 380px;
+}
+
+.login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo {
+  width: 100%;
+  height: auto;
+  image-rendering: crisp-edges;
+  image-rendering: auto;
+}
+
+.labels{
+    color: #2B448C;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#username, #password{
+    background: none;
+    border: none;
+    border-bottom: 2px solid #2B448C;
+    padding-top: 9px;
+    cursor: text;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+}
+
+input:focus {
+    outline: 0;
+}
+
+#login-button{
+    cursor: pointer;
+    border: none;
+    background-color: #2B448C;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+}
