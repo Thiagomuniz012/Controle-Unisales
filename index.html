@@ -14,6 +14,7 @@
 <body>
 
     <body>
+        
         <div class="container">
             <div class="formulario">
                 <div class="imgs">
@@ -21,12 +22,16 @@
                 </div>
                 <br><br>
                 <div class="login">
-                    <form>
-                        <label for="username" class="labels"><strong>Email</strong></label><br>
-                        <input type="text" id="username" name="username"><br><br>
-
+                    <form id="form">
+                        <label for="email" class="labels"><strong>Email</strong></label><br>
+                        <input type="text" id="email" name="email" class="required" oninput="emailValidate()">
+                        <br><span class="span-required">Insira um email válido</span>
+                        <br><br>
                         <label for="password" class="labels"><strong>Senha</strong></label><br>
-                        <input type="password" id="password" name="password"><br><br>
+                        <input type="password" id="password" name="password" class="required" oninput="passwordValidate()">
+                        <button type="button" id="show-password"><img src="https://cdn1.iconfinder.com/data/icons/photo-editor-3/24/i24_photoedit_redeye-512.png" id="olho" class="olho"></button>
+                        <br><span class="span-required">Insira uma senha válida</span>
+                        <br><br>
                         <br>
                         <button id="login-button"><strong>ENTRAR</strong></button>
                     </form>
