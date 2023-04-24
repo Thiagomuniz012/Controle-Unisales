@@ -71,6 +71,10 @@ input:focus {
     color: white;
 }
 
+#login-button:hover{
+    background-color: #3e5aae
+}
+
 .span-required{
     display: none;
     color: #D91828;
@@ -85,8 +89,8 @@ input:focus {
     position: relative;
     right: 37px;
     top: 4px;
-    background: transparent;
     border: none;
+    background: transparent;
     cursor: pointer;
     width: 1px;
     font-size: 12px;
@@ -95,6 +99,13 @@ input:focus {
 }
 
 #olho{
-    width: 20px;
+    width: 17px;
+    background-color: #2b4b8c6d;
+    border: 0px solid black;
+    padding: 3px;
+    border-radius: 12px;
+}
 
+#olho:active{
+    background-color: #2b4b8caa;
 }

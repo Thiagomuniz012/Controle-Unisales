@@ -9,8 +9,8 @@ document.getElementById("login-button").addEventListener("click", function(event
     var userData = JSON.parse(storedData);
   
     // Definir usuário e senha padrão
-    var defaultEmail = "coordenador@salesiano.br"; //"coordenador@salesiano.br";
-    var defaultPassword = "coordenador2023"; //"coordenador2023";
+    var defaultEmail = "coordenador@salesiano.br";
+    var defaultPassword = "coordenador2023";
   
     // Obter os dados do formulário
     var email = document.getElementById("email").value;
@@ -105,15 +105,13 @@ document.getElementById("login-button").addEventListener("click", function(event
   });
 
 //Funcao do botao de mostrar a senha
-  const showpasswordInput = document.getElementById("password");
-  const showPasswordButton = document.getElementById("show-password");
+const showpasswordInput = document.getElementById("password");
+const showPasswordButton = document.getElementById("show-password");
 
-  showPasswordButton.addEventListener("click", function() {
-  if (passwordInput.type === "password") {
-    passwordInput.type = "text"
-    showPasswordButton.textContent
-  } else {
-    passwordInput.type = "password"
-    showPasswordButton.textContent
-  }
+showPasswordButton.addEventListener("mousedown", function() {
+  passwordInput.type = "text";
+});
+
+showPasswordButton.addEventListener("mouseup", function() {
+  passwordInput.type = "password";
 });
