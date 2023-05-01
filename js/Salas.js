@@ -19,6 +19,43 @@ function loadItens() {
     })
 }
 
+// recupera os cursos do localStorage e preenche as opções do select
+const preencherSelectCursos = () => {
+  // recupera o valor associado à key "cursos"
+  const cursosValor = localStorage.getItem("db_prof");
+
+  // verifica se há dados no localStorage para os cursos
+  if (cursosValor) {
+    // transforma a string em um array de objetos
+    const cursosArray = JSON.parse(cursosValor);
+
+    // seleciona o elemento <select> no HTML
+    const selectCursos = document.querySelector("#m-professor");
+
+    // limpa as opções existentes
+    selectCursos.innerHTML = "";
+
+    // cria uma nova opção para cada curso
+    cursosArray.forEach(curso => {
+      // cria uma nova opção
+      const novaOpcao = document.createElement("option");
+
+      // define o texto da opção como o nome do curso atual
+      novaOpcao.textContent = curso.professor;
+
+      // adiciona o valor do curso como um atributo da opção
+      novaOpcao.setAttribute("value", curso.Valor);
+
+      // adiciona a opção ao elemento <select>
+      selectCursos.appendChild(novaOpcao);
+    });
+  }
+};
+
+// chama a função para preencher as opções do select
+preencherSelectCursos();
+
+
 loadItens()
 
 function insertItem(item, index) {
