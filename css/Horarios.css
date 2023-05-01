@@ -101,11 +101,6 @@ td {
   text-align: left;
   vertical-align: top;
 }
-td:hover{
-  background-color: #2B4C8C;
-  color:#fff
-  
-}
 
 #text-calen{
   text-align: center;
