@@ -4,10 +4,7 @@ document.getElementById("login-button").addEventListener("click", function(event
   });
 
   function validateLogin() {
-    // Obter os dados do Local Storage
-    var storedData = localStorage.getItem("userData");
-    var userData = JSON.parse(storedData);
-  
+
     // Definir usuário e senha padrão
     var defaultEmail = "coordenador@salesiano.br";
     var defaultPassword = "coordenador2023";
@@ -17,7 +14,7 @@ document.getElementById("login-button").addEventListener("click", function(event
     var password = document.getElementById("password").value;
   
     // Verificar se os dados correspondem
-    if ((userData && userData.email === email && userData.password === password) || (email === defaultEmail && password === defaultPassword)) {
+    if ((email === defaultEmail && password === defaultPassword)) {
       // Login bem-sucedido
       window.location.href = "Menu.html";
     } else {
@@ -25,21 +22,6 @@ document.getElementById("login-button").addEventListener("click", function(event
       alert("Nome de usuário ou senha incorretos.");
       document.getElementById("password").value = "";
     }
-  }
-  
-  function createAccount() {
-    // Obter os dados do formulário
-    var email = document.getElementById("email").value;
-    var password = document.getElementById("password").value;
-  
-    // Criar o objeto de usuário
-    var userData = {
-      email: email,
-      password: password
-    };
-  
-    // Armazenar os dados no Local Storage
-    localStorage.setItem("userData", JSON.stringify(userData));
   }
   
 
