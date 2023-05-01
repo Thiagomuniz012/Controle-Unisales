@@ -29,10 +29,58 @@
 
   <!-- todo conteudo aqui -->
   <div class="body2">
-    <h1>Quadro de Horários!</h1>
-    <p>Este é o conteúdo principal da página.</p>
+    <h1></h1>
+    <p></p>
   </div>
   <!-- fim do conteudo -->
+   <div id="container">
+    <div id="header">
+      <div id="monthDisplay"></div>
+
+      <div>
+        <button id="backButton"><</button>
+        <button id="nextButton">></button>
+      </div>
+
+    </div>
+
+    <div id="weekdays">
+      <div>Dom</div>
+      <div>Seg</div>
+      <div>Ter</div>
+      <div>Qua</div>
+      <div>Qui</div>
+      <div>Sex</div>
+      <div>Sab</div>
+    </div>
+
+
+    <!-- div dinamic -->
+    <div id="calendar"></div>
+
+
+  </div>
+
+  <div id="newEventModal">
+    <h2>Novo evento</h2>
+
+    <input id="eventTitleInput" placeholder="Add Evento" />
+
+    <button id="saveButton">Salvar</button>
+    <button id="cancelButton">Cancelar</button>
+  </div>
+
+  <div id="deleteEventModal">
+    <h2>Evento</h2>
+
+    <div id="eventText"></div><br>
+
+
+    <button id="deleteButton">Deletar</button>
+    <button id="closeButton">Fechar</button>
+  </div>
+
+  <div id="modalBackDrop"></div>
   <script src="/js/Horarios.js"></script>
 </body>
 
