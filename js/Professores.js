@@ -1,3 +1,5 @@
+
+
 /**'use strict' -> restringe o uso de cons, var, let, ...*/
 
 const openModal = () => document.getElementById('modal')
@@ -28,6 +30,7 @@ const updateProf = (index, prof) => {
 /**mandando para o local storage */
 const readProf = () => getLocalStorage()
 
+
 const createProf = (prof) => {
     const dbProf = getLocalStorage()
     dbProf.push (prof)
@@ -38,6 +41,79 @@ const isValidFields = () => {
     return document.getElementById('form').reportValidity()
 }
 
+// recupera os cursos do localStorage e preenche as opções do select
+const preencherSelectCursos = () => {
+    // recupera o valor associado à key "cursos"
+    const cursosValor = localStorage.getItem("db_Curso");
+  
+    // verifica se há dados no localStorage para os cursos
+    if (cursosValor) {
+      // transforma a string em um array de objetos
+      const cursosArray = JSON.parse(cursosValor);
+  
+      // seleciona o elemento <select> no HTML
+      const selectCursos = document.querySelector("#curso");
+  
+      // limpa as opções existentes
+      selectCursos.innerHTML = "";
+  
+      // cria uma nova opção para cada curso
+      cursosArray.forEach(curso => {
+        // cria uma nova opção
+        const novaOpcao = document.createElement("option");
+  
+        // define o texto da opção como o nome do curso atual
+        novaOpcao.textContent = curso.Nome;
+  
+        // adiciona o valor do curso como um atributo da opção
+        novaOpcao.setAttribute("value", curso.Valor);
+  
+        // adiciona a opção ao elemento <select>
+        selectCursos.appendChild(novaOpcao);
+      });
+    }
+  };
+  
+  // chama a função para preencher as opções do select
+  preencherSelectCursos();
+
+  // recupera os cursos do localStorage e preenche as opções do select
+const preencherSelectDesafios = () => {
+    // recupera o valor associado à key "cursos"
+    const cursosValor = localStorage.getItem("listaDesafios");
+  
+    // verifica se há dados no localStorage para os cursos
+    if (cursosValor) {
+      // transforma a string em um array de objetos
+      const cursosArray = JSON.parse(cursosValor);
+  
+      // seleciona o elemento <select> no HTML
+      const selectCursos = document.querySelector("#desafio");
+  
+      // limpa as opções existentes
+      selectCursos.innerHTML = "";
+  
+      // cria uma nova opção para cada curso
+      cursosArray.forEach(curso => {
+        // cria uma nova opção
+        const novaOpcao = document.createElement("option");
+  
+        // define o texto da opção como o nome do curso atual
+        novaOpcao.textContent = curso.nomeDesafio;
+  
+        // adiciona o valor do curso como um atributo da opção
+        novaOpcao.setAttribute("value", curso.Valor);
+  
+        // adiciona a opção ao elemento <select>
+        selectCursos.appendChild(novaOpcao);
+      });
+    }
+  };
+  
+  // chama a função para preencher as opções do select
+  preencherSelectDesafios();
+  
+  
 //Interação com o layout
 
 const clearFields = () => {
@@ -74,6 +150,8 @@ const saveProf = () => {
         }
     }
 }
+
+
 
 /**tudo que é salvo no localStorage vem para cá, se quiser acrescentar uma tabela, add ela aqui
  * (***) tbody
