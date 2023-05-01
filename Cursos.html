@@ -28,10 +28,70 @@
     <!-- fim da sidebar -->
 
     <!-- todo conteudo aqui -->
+
     <div class="body2">
-        <h1>Área de Cursos!</h1>
-        <p>Este é o conteúdo principal da página.</p>
-    </div>
+        <h1>Cadastro de Cursos!</h1>
+      <main>
+          <button type="button" class="button blue mobile" id="cadastrarCliente">Cadastrar curso</button>
+          <table id="tableCurso" class="records">
+              <thead>
+                  <tr>
+                      <th>Nome</th>
+                      <th>Habilitação</th>
+                      <th>Modalidade</th>
+                      <th>Coordenador</th>
+                      <th>Turno</th>
+                      <th>Período</th>
+                      <th>Matriz curricular</th>
+                      <th>Acc</th>
+                      <th></th>
+                  </tr>
+              </thead>
+              <tbody>
+  
+              </tbody>
+          </table>
+          <div class="modal" id="modal">
+              <div class="modal-content">
+                  <header class="modal-header">
+                      <h2>Novo curso</h2>
+                      <span class="modal-close" id="modalClose">&#10006;</span>
+                  </header>
+                  <form id="form" class="modal-form">
+                      <input type="text" id="nomeCurso" data-index="new" class="modal-field" placeholder="Nome"
+                          required>
+                      <input type="text" id="hab" class="modal-field" placeholder="Habilitação" required>
+                      <input type="text" id="modalidade" class="modal-field" placeholder="Modalidade" required>
+                      <input type="text" id="coord" class="modal-field" placeholder="Coordenador" required>
+                      <input type="text" id="turno" class="modal-field" placeholder="Turno" required>
+                      <br>
+                      <select id="periodo" class="modal-field "name="periodo" required>
+                        <option value="1º">1º</option>
+                        <option value="2º">2º</option>
+                        <option value="3º">3º</option>
+                        <option value="4º">4º</option>
+                        <option value="5º">5º</option>
+                        <option value="6º">6º</option>
+                        <option value="7º">7º</option>
+                        <option value="8º">8º</option>
+                        <option value="9º">9º</option>
+                        <option value="10º">10º</option>
+                    </select>
+                      <input type="text" id="matriz" class="modal-field" placeholder="Matriz curricular" required>
+                      <input type="text" id="acc" class="modal-field" placeholder="Acc" required>
+                      
+                  </form>
+                  <footer class="modal-footer">
+                      <button id="salvar" class="button blue2">Salvar</button>
+                      <button id="cancelar" class="button blue">Cancelar</button>
+                  </footer>
+              </div>
+          </div>
+      </main>
+      <footer>
+
+      </footer>
+          </div>
     <!-- fim do conteudo -->
     <script src="/js/Cursos.js"></script>
 </body>
