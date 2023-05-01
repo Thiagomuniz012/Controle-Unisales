@@ -66,7 +66,7 @@ const preencherSelectCursos = () => {
         novaOpcao.textContent = curso.Nome;
   
         // adiciona o valor do curso como um atributo da opção
-        novaOpcao.setAttribute("value", curso.Valor);
+        novaOpcao.setAttribute("value", curso.Nome);
   
         // adiciona a opção ao elemento <select>
         selectCursos.appendChild(novaOpcao);
@@ -102,7 +102,7 @@ const preencherSelectDesafios = () => {
         novaOpcao.textContent = curso.nomeDesafio;
   
         // adiciona o valor do curso como um atributo da opção
-        novaOpcao.setAttribute("value", curso.Valor);
+        novaOpcao.setAttribute("value", curso.nomeDesafio);
   
         // adiciona a opção ao elemento <select>
         selectCursos.appendChild(novaOpcao);
@@ -132,11 +132,7 @@ const saveProf = () => {
             professor : document.getElementById('professor').value,
             desafio : document.getElementById('desafio').value,
             curso : document.getElementById('curso').value
-
         }
-
-        /**crud de alteração */
-
 
         const index = document.getElementById('professor').dataset.index
         if (index == 'new') {
@@ -150,6 +146,7 @@ const saveProf = () => {
         }
     }
 }
+
 
 
 
