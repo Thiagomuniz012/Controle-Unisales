@@ -133,7 +133,7 @@ h2 {
 #container {
   margin-top: 20px;
   margin-right: 100px;
-  width: 500px;
+  width: 650px;
   border: solid #2B448C;
   padding: 5px;
   border-radius: 10px;
@@ -141,7 +141,6 @@ h2 {
 
 #weekdays {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
 
@@ -149,11 +148,11 @@ h2 {
 
 #weekdays div {
   flex: 1;
-  text-align: center;
   font-weight: bold;
   background: #2B448C;
   padding: 15px;
   color: #fff;
+  
 }
 
 #weekdays div:hover {
@@ -169,7 +168,7 @@ h2 {
 
 .day {
   text-align: center;
-  width: 60px;
+  width: 80px;
   padding: 10px;
   height: 60px;
   cursor: pointer;
@@ -181,6 +180,7 @@ h2 {
   flex-direction: column;
   justify-content: space-between;
   border-radius: 15%;
+  
 }
 
 .day:active {
