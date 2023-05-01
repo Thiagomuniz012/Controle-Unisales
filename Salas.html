@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
@@ -8,6 +8,7 @@
   <title>Salas</title>
   <link rel="stylesheet" href="css/Salas.css">
   <link rel="icon" href="imagens/Logo-UniSales-PNG.png" type="image/png">
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
@@ -29,8 +30,59 @@
 
   <!-- todo conteudo aqui -->
   <div class="body2">
-    <h1>Área das Salas!</h1>
-    <p>Este é o conteúdo principal da página.</p>
+    <div class="container">
+        
+      <div class="header">
+        <span>Cadastro de Salas</span>
+        <button onclick="openModal()" id="new">Incluir</i></button>
+      </div>
+
+      <div class="divTable">
+          <table>
+              <thead>
+                  <tr>
+                      <th>Data</th>
+                      <th>Professor</th>
+                      <th>Sala</th>
+                      <th class="acao">Editar</th>
+                      <th class="acao">Excluir</th>
+                  </tr>
+              </thead>
+
+              <tbody>
+              </tbody>
+
+          </table>
+      </div>
+
+      <div class="modal-container">
+          <div class="modal">
+              <form>
+                  <label for="m-data">Data</label>
+                  <input id="m-data" type="date" required />
+      
+                  <label for="m-professor">Professor</label>
+                  <select id="m-professor">
+                    <option value=" "> </option>
+                  </select>
+
+                  <br><br>
+      
+                  <label for="m-sala">Sala</label>
+                  <select id="m-sala">
+                    <option value="235">235</option>
+                    <option value="255">255</option>
+                    <option value="300">300</option>
+                    <option value="324">324</option>
+                    <option value="350">350</option>
+                  </select>
+                  
+                  <button id="btnSalvar">Salvar</button>
+              </form>
+          </div>
+      </div>
+  
+  </div>
   </div>
   <!-- fim do conteudo -->
   <script src="/js/Salas.js"></script>
