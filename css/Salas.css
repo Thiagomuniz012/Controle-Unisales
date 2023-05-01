@@ -69,7 +69,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0,0,0,0.1);
+  background-color: #fff  ;
 }
 
 button {
@@ -81,6 +81,7 @@ button {
   height: 80%;
   border-radius: 10px;
   background: white;
+  border: 2px solid #2B448C;
 }
 
 .header {
@@ -95,6 +96,7 @@ button {
   font-weight: 900;
   font-size: 20px;
   word-break: break-all;
+  
 }
 
 #new {
@@ -216,7 +218,7 @@ tbody tr td.acao {
   flex-direction: column;
   align-items: center;
   padding: 40px;
-  background-color: white;
+  background-color: whitesmoke;
   border-radius: 10px;
   width: 30%;
 }
