@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
@@ -29,59 +29,78 @@
 
   <!-- todo conteudo aqui -->
   <div class="body2">
-    <h1></h1>
-    <p></p>
+    <h1>Quadro de Horários!</h1>
+    <div id="text-calen">
+      <p>Calendário de maio de 2023</p>
+    </div id="container">
+    <div>
+      <table>
+        <thead>
+          <tr>
+            <th>Dom</th>
+            <th>Seg</th>
+            <th>Ter</th>
+            <th>Qua</th>
+            <th>Qui</th>
+            <th>Sex</th>
+            <th>Sáb</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td id="day1">1</td>
+            <td id="day2">2</td>
+            <td id="day3">3</td>
+            <td id="day4">4</td>
+            <td id="day5">5</td>
+            <td id="day6">6</td>
+            <td id="day7">7</td>
+          </tr>
+          <tr>
+            <td id="day8">8</td>
+            <td id="day9">9</td>
+            <td id="day10">10</td>
+            <td id="day11">11</td>
+            <td id="day12">12</td>
+            <td id="day13">13</td>
+            <td id="day14">14</td>
+          </tr>
+          <tr>
+            <td id="day15">15</td>
+            <td id="day16">16</td>
+            <td id="day17">17</td>
+            <td id="day18">18</td>
+            <td id="day19">19</td>
+            <td id="day20">20</td>
+            <td id="day21">21</td>
+          </tr>
+          <tr>
+            <td id="day22">22</td>
+            <td id="day23">23</td>
+            <td id="day24">24</td>
+            <td id="day25">25</td>
+            <td id="day26">26</td>
+            <td id="day27">27</td>
+            <td id="day28">28</td>
+          </tr>
+          <tr>
+            <td id="day29">29</td>
+            <td id="day30">30</td>
+            <td id="day31">31</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
+  </div>
+
   <!-- fim do conteudo -->
-   <div id="container">
-    <div id="header">
-      <div id="monthDisplay"></div>
-
-      <div>
-        <button id="backButton"><</button>
-        <button id="nextButton">></button>
-      </div>
-
-    </div>
-
-    <div id="weekdays">
-      <div>Dom</div>
-      <div>Seg</div>
-      <div>Ter</div>
-      <div>Qua</div>
-      <div>Qui</div>
-      <div>Sex</div>
-      <div>Sab</div>
-    </div>
-
-
-    <!-- div dinamic -->
-    <div id="calendar"></div>
-
-
-  </div>
-
-  <div id="newEventModal">
-    <h2>Novo evento</h2>
-
-    <input id="eventTitleInput" placeholder="Add Evento" />
-
-    <button id="saveButton">Salvar</button>
-    <button id="cancelButton">Cancelar</button>
-  </div>
-
-  <div id="deleteEventModal">
-    <h2>Evento</h2>
-
-    <div id="eventText"></div><br>
-
-
-    <button id="deleteButton">Deletar</button>
-    <button id="closeButton">Fechar</button>
-  </div>
-
-  <div id="modalBackDrop"></div>
   <script src="/js/Horarios.js"></script>
+
 </body>
 
 </html>
