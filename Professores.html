@@ -8,6 +8,9 @@
   <title>Professores</title>
   <link rel="stylesheet" href="css/Professores.css">
   <link rel="icon" href="imagens/Logo-UniSales-PNG.png" type="image/png">
+  <script defer src="js/Professores.js"></script>
+
+
 </head>
 
 <body>
@@ -27,13 +30,59 @@
   </div>
   <!-- fim da sidebar -->
 
+
   <!-- todo conteudo aqui -->
   <div class="body2">
-    <h1>Área de Professores!</h1>
-    <p>Este é o conteúdo principal da página.</p>
+    <header>
+        <h1 class="header1-title">Cadastro de Professor</h1>
+    </header>
+    <main>
+      <button type="button" class="button red mobile" id="cadastrarProfessor">Cadastrar Professor</button>
+      <table id="tableProf" class="records">
+          <thead>
+              <tr>
+                  <th>Sala</th>
+                  <th>Professor</th>
+                  <th>Periodo</th>
+                  <th>Desafios</th>
+                  <th>Cursos</th>
+                  <th><!--botões de ação--></th>
+              </tr>
+          </thead>
+          
+          <tbody>
+            <!--é usado para agrupar o conteúdo da tabela em um corpo (body) de dados. 
+              A tag tbody é usada para definir a seção principal do conteúdo da tabela que contém as linhas e células de dados.
+            Sua funcionalidade está no JS, comentada, tenham como referencia o (***)-->
+          </tbody>
+      </table>
+      <div class="modal" id="modal">
+          <div class="modal-content">
+              <header class="modal-header">
+                  <h2>Novo Professor</h2>
+                  <span class="modal-close" id="modalClose">&#10006;</span>
+              </header>
+              
+              <form id="form" class="modal-form">
+                  <input type="text" id="sala" data-index="new" class="modal-field" placeholder="Nº da Sala"
+                      required>
+                  <input type="text" id="professor" class="modal-field" placeholder="Professor" required>
+                  <input type="text" id="periodo" class="modal-field" placeholder="Periodo" required>
+                  <input type="text" id="desafio" class="modal-field" placeholder="Desafio" required>
+                  <input type="text" id="curso" class="modal-field" placeholder="Cursos" required>
+
+              </form>
+              <footer class="modal-footer">
+                  <button id="salvar" class="button green">Salvar</button>
+                  <button id="cancelar" class="button blue">Cancelar</button>
+              </footer>
+          </div>
+      </div>
+  </main>
   </div>
   <!-- fim do conteudo -->
-  <script src="/js/Professores.js"></script>
+ <!-- <script src="js/Professores.js"></script>-->
+ 
 </body>
 
 </html>
