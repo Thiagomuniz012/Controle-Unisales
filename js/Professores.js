@@ -53,9 +53,7 @@ const clearFields = () => {
 const saveProf = () => {
     if (isValidFields()) {
         const prof = {
-            sala: document.getElementById('sala').value,
             professor : document.getElementById('professor').value,
-            periodo : document.getElementById('periodo').value,
             desafio : document.getElementById('desafio').value,
             curso : document.getElementById('curso').value
 
@@ -83,11 +81,10 @@ const saveProf = () => {
 const createRow = (prof, index) => {
     const newRow = document.createElement('tr')
     newRow.innerHTML = `
-        <td>${prof.sala}</td>
+
         <td>${prof.professor}</td>
-        <td>${prof.periodo}</td>
-        <td>${prof.desafio}</td>
         <td>${prof.curso}</td>
+        <td>${prof.desafio}</td>
 
         <td>
             <button type="button" class="button green" id="edit-${index}">Editar</button>
@@ -111,8 +108,6 @@ const updateTable = () => {
 const fillFields = (prof) => {
     document.getElementById('professor').value = prof.professor
 
-    document.getElementById('sala').value = prof.sala
-    document.getElementById('periodo').value = prof.periodo
     document.getElementById('desafio').value = prof.desafio
     document.getElementById('curso').value = prof.curso
     document.getElementById('professor').dataset.index = prof.index

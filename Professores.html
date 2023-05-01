@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
@@ -41,12 +41,12 @@
       <table id="tableProf" class="records">
           <thead>
               <tr>
-                  <th>Sala</th>
+                  
                   <th>Professor</th>
-                  <th>Periodo</th>
-                  <th>Desafios</th>
                   <th>Cursos</th>
-                  <th><!--botões de ação--></th>
+                  <th>Desafios</th>
+                  
+                  <th><!--botões de ação--></th>       
               </tr>
           </thead>
           
@@ -55,6 +55,7 @@
               A tag tbody é usada para definir a seção principal do conteúdo da tabela que contém as linhas e células de dados.
             Sua funcionalidade está no JS, comentada, tenham como referencia o (***)-->
           </tbody>
+
       </table>
       <div class="modal" id="modal">
           <div class="modal-content">
@@ -64,12 +65,14 @@
               </header>
               
               <form id="form" class="modal-form">
-                  <input type="text" id="sala" data-index="new" class="modal-field" placeholder="Nº da Sala"
-                      required>
+                 
                   <input type="text" id="professor" class="modal-field" placeholder="Professor" required>
-                  <input type="text" id="periodo" class="modal-field" placeholder="Periodo" required>
-                  <input type="text" id="desafio" class="modal-field" placeholder="Desafio" required>
-                  <input type="text" id="curso" class="modal-field" placeholder="Cursos" required>
+
+                  <label for="Curso">Curso</label>
+                  <select id="curso" placeholder="curso" required></select> <option value""></option></select>
+
+                  <label for="Desafio">Desafio</label>
+                  <select id="desafio" placeholder="desafio" required></select> <option value""></option></select>
 
               </form>
               <footer class="modal-footer">
